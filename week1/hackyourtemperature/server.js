@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   res.send('hello from backend to frontend!');
 });
 app.post('/weather', (req, res) => {
-  const cityName = req.body.cityName;
+  const { cityName } = req.body;
   res.send(cityName);
 });
 
