@@ -9,7 +9,7 @@ describe('POST /weather', () => {
   describe('when the city name is provided', () => {
     it('should respond with a status code of 200', async () => {
       const response = await request(app).post('/weather').send({
-        cityName: 'cityName',
+        cityName: 'Amsterdam',
       });
       expect(response.status).toBe(200);
     });

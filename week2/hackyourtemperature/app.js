@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 let temperature;
 app.post('/weather', async (req, res) => {
-  const cityName = req.body.cityName;
+  const { cityName } = req.body;
   if (!cityName) {
     res.sendStatus(400);
     return;
